@@ -4,6 +4,6 @@
 # Check if CPU supports virtualisation #
 #--------------------------------------#
 
-egrep -c '(vmx|svm)' /proc/cpuinfo
+grep -Ec '(vmx|svm)' /proc/cpuinfo
 
 exit 0
