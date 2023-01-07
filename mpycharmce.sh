@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#--------------------------#
-# Manual PyCharm CE update #
-#--------------------------#
+echo "#----------------------------#" 
+echo "#  manual PyCharm CE update  #"
+echo "#----------------------------#"
 
 MASTER_PATH="$HOME/apps/pycharm-ce"
 

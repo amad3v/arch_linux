@@ -1,8 +1,5 @@
 func getField(rowLen) {
-	if (rowLen == 4)
-		return $3
-	else
-		return $2
+	return $(rowLen - 1)
 }
 
 {

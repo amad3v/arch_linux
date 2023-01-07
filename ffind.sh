@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-----------#
-# Find file #
-#-----------#
+echo "#-----------#"
+echo "# Find file #"
+echo "#-----------#"
 
 PATTERN="$1"
 

@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#------------------------------------#
-# Linter/formatter for octave/matlab #
-#------------------------------------#
+echo "#------------------------------------#"
+echo "# Linter/formatter for octave/matlab #"
+echo "#------------------------------------#"
 
 FILENAME="$1"
 

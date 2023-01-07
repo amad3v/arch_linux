@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-------------------------#
-# Reload bluetooth driver #
-#-------------------------#
+echo "#-------------------------#"
+echo "# Reload bluetooth driver #"
+echo "#-------------------------#"
 
 sudo modprobe -r btusb
 sudo modprobe btusb

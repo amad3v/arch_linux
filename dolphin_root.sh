@@ -1,15 +1,15 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-----------------------#
-# Start dolphin as root #
-#-----------------------#
+echo "#-----------------------#"
+echo "# Start dolphin as root #"
+echo "#-----------------------#"
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     xhost +si:localuser:root
     pkexec env DISPLAY="$DISPLAY" XAUTHORITY="$XAUTHORITY" KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dbus-launch dolphin %U
     xhost -si:localuser:root
 else
-    pkexec env DISPLAY="$DISPLAY" XAUTHORITY"=$XAUTHORITY" KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin %U
+    pkexec env DISPLAY="$DISPLAY" XAUTHORITY="$XAUTHORITY" KDE_SESSION_VERSION=5 KDE_FULL_SESSION=true dolphin %U
 fi
 
 exit 0

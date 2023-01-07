@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-----------------------#
-# Manual PyCharm update #
-#-----------------------#
+echo "#-----------------------#" 
+echo "# manual PyCharm update #"
+echo "#-----------------------#"
 
 MASTER_PATH="$HOME/apps/pycharm"
 PROP_FILE="idea.properties"

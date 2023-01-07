@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#---------------------#
-# Manual CLion update #
-#---------------------#
+echo "#---------------------#" 
+echo "# manual CLion update #"
+echo "#---------------------#"
 
 MASTER_PATH="$HOME/apps/clion"
 PROP_FILE="idea.properties"

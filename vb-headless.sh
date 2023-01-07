@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 #---------------------------------------------#
 # Run virtual machine in headless mode (VBox) #

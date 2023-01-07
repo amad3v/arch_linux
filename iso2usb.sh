@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-##########################
-# write iso to usb drive #
-##########################
+echo "#------------------------#" 
+echo "# write iso to usb drive #"
+echo "#------------------------#"
 
 ISO=$1
 DRIVE=$2

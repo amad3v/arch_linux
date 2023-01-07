@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 #-----------------------------------#
 # Convert SVG to PDF using inkscape #

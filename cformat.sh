@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#---------------------#
-# Custom clang format #
-#---------------------#
+echo "#---------------------#"
+echo "# Custom clang format #"
+echo "#---------------------#"
 
 find "$(pwd)" -iname "*.h" -o -iname "*.cpp" -type f -exec clang-format -style=file -i {} \;
 

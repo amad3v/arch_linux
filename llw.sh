@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-------------------
-# Find app link path
-#-------------------
+echo "#--------------------#" 
+echo "# find app link path #"
+echo "#--------------------#"
 
 APPNAME="$1"
 

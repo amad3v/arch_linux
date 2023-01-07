@@ -1,43 +1,56 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-------------#
-# Control fan #
-#-------------#
+echo "#-------------#"
+echo "# Control fan #"
+echo "#-------------#"
 
 # Entered parameter
 # 0: Quiet
 # 1: Balanced
 # 2: Performance
 CHOICE="$1"
+SPACES="  "
 
 fan_help() {
-    printf "Supported modes:\n"
-    printf "\t0: Quiet\n"
-    printf "\t1: Cool Bottom\n"
-    printf "\t2: Balanced\n"
-    printf "\t3: Performance\n"
+    printf "%s [-h] MODE --- set thermal mode\n\n" "$(basename "$0")"
+    printf "where:\n"
+    printf "%s-h: Show this help\n" "$SPACES"
+    printf "%s 0: Quiet\n" "$SPACES"
+    printf "%s 1: Cool Bottom\n" "$SPACES"
+    printf "%s 2: Balanced\n" "$SPACES"
+    printf "%s 3: Performance\n" "$SPACES"
 }
 
-if [ "$CHOICE" == "h" ]; then
-    fan_help
-    exit 0
-fi
+while getopts ':h' option; do
+    case "$option" in
+    h)
+        fan_help
+        exit 0
+        ;;
+        #\?) # incorrect option
+    *) ;;
 
-if [ "$CHOICE" == 0 ]; then
-    MODE="quiet"
-elif [ "$CHOICE" == 1 ]; then
-    MODE="cool-bottom"
-elif [ "$CHOICE" == 2 ]; then
-    MODE="balanced"
-elif [ "$CHOICE" == 3 ]; then
-    MODE="performance"
-else
+    esac
+done
+
+case "$CHOICE" in
+0) MODE="quiet" ;;
+1) MODE="cool-bottom" ;;
+2) MODE="balanced" ;;
+3) MODE="performance" ;;
+*)
     printf "Incorrect selection\n\n"
     fan_help
     exit 1
-fi
+    ;;
+esac
 
-sudo smbios-thermal-ctl --set-thermal-mode="$MODE"
+if [[ "$EUID" = 0 ]]; then
+    smbios-thermal-ctl --set-thermal-mode="$MODE"
+else
+    echo "Execute with sudo."
+    exit 1
+fi
 
 printf "Done! New mode: %s \U1F44F\n" "$MODE"
 

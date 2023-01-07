@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 #------------------#
 # Launch QtConsole #
@@ -12,6 +12,8 @@ workon study
 
 jupyter qtconsole 
 
-deactivate
+#deactivate
 
-exit 0
+#exit 0
+sleep 20
+

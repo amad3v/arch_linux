@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-----------------------------#
-# Set GPU via optimus-manager #
-#-----------------------------#
+echo "#-----------------------------#" 
+echo "# set GPU via optimus-manager #"
+echo "#-----------------------------#"
 
 function help() {
     echo "omgpu - Optimus Manager GPU setter."

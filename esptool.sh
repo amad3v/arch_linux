@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-#-----------------------#
-# ESP8266 flashing tool #
-#-----------------------#
+echo "#-----------------------#"
+echo "# ESP8266 flashing tool #"
+echo "#-----------------------#"
 
 python -m esptool
 
